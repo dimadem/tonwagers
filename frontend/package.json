@@ -11,6 +11,7 @@
   "dependencies": {
     "@orbs-network/ton-access": "^2.2.2",
     "@tonconnect/ui-react": "^0.0.14",
+    "func-js": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ton": "^13.3.0",
