@@ -60,6 +60,7 @@ export default function ContractCompiler() {
         return;
       }
 
+      // Contract code cell
       let codeCell = result.codeBoc.toString("base64");
 
       // result.fiftCode contains assembly version of your code (for debug purposes)

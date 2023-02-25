@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@orbs-network/ton-access": "^2.2.2",
-    "@react-frontend-developer/buffers": "^2.0.1",
     "@ton-community/func-js": "^0.4.1",
     "@tonconnect/ui-react": "^0.0.14",
     "react": "^18.2.0",
