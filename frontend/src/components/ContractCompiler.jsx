@@ -9,7 +9,7 @@ export default function ContractCompiler() {
 
   const { contract, setContract } = useContext(ContractContext);
 
-  console.log("CONTRACT CONTEXT:", contract);
+  // console.log("CONTRACT CONTEXT:", contract);
 
   // reads file contents synchronously in client-side
   const fetchFuncData = async () => {
@@ -31,11 +31,11 @@ export default function ContractCompiler() {
   const compilerFunc = async () => {
     try {
       let version = await compilerVersion();
-      console.log("Compiler Version:", version);
+      // console.log("Compiler Version:", version);
 
       // State Consoles
-      console.log("stdlibState", stdlibState);
-      console.log("counterState", counterState);
+      // console.log("stdlibState", stdlibState);
+      // console.log("counterState", counterState);
 
       let result = await compileFunc({
         // Sources
@@ -61,9 +61,11 @@ export default function ContractCompiler() {
       let codeCell = result.codeBoc.toString("base64");
       setCounterCodeCell(codeCell);
 
+      // кидаем в контекст BOC контракта
+      setContract({ BocContract: codeCell });
       // result.fiftCode contains assembly version of your code (for debug purposes)
-      console.log("CODECELL::", codeCell);
-      console.log("COUNTER CODE CELL", counterCodeCell);
+      // console.log("CODECELL::", codeCell);
+      // console.log("COUNTER CODE CELL", counterCodeCell);
     } catch (error) {
       console.log(error);
     }
