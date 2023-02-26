@@ -3,7 +3,7 @@
 ```
 cd frontend
 npm install
-npm start // subject to fix 
+npm run dev
 ```
 
 ## compiling via func-js
