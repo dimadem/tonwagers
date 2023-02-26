@@ -1,10 +1,15 @@
 import { compileFunc, compilerVersion } from "@ton-community/func-js";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ContractContext } from "../context/contract.context";
 
 export default function ContractCompiler() {
   const [stdlibState, setStdlib] = useState("");
   const [counterState, setCounter] = useState("");
   const [counterCodeCell, setCounterCodeCell] = useState("");
+
+  const { contract, setContract } = useContext(ContractContext);
+
+  console.log("CONTRACT CONTEXT:", contract);
 
   // reads file contents synchronously in client-side
   const fetchFuncData = async () => {
