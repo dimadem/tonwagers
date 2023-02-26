@@ -12,6 +12,7 @@
     "@orbs-network/ton-access": "^2.2.2",
     "@ton-community/func-js": "^0.4.1",
     "@tonconnect/ui-react": "^0.0.14",
+    "fs": "^0.0.1-security",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ton": "^13.3.0",
