@@ -1,9 +1,5 @@
 import { compileFunc, compilerVersion } from "@ton-community/func-js";
-import { Cell } from "ton";
-// import { Buffers } from "@react-frontend-developer/buffers";
 import { useEffect, useState } from "react";
-// import stdlib from "../contracts/stdlib.fc";
-// import counter from "../contracts/counter.fc";
 
 export default function ContractCompiler() {
   const [stdlibState, setStdlib] = useState("");
@@ -16,14 +12,11 @@ export default function ContractCompiler() {
         response.text()
       );
       setStdlib(stdlib);
-      // console.log("FETCH ONLY:", stdlib);
-      // console.log("FETCH STDLIB:::", stdlib);
 
-      let counter = await fetch("../src/contracts/counter.fc").then(
+      let counter = await fetch("../src/contracts/counter/counter.fc").then(
         (response) => response.text()
       );
       setCounter(counter);
-      // console.log("FETCH COUNTER:::", counter);
     } catch (error) {
       console.error(error);
     }
@@ -53,14 +46,12 @@ export default function ContractCompiler() {
         ],
       });
 
-      console.log("RESULT::", result);
-      // console.log("RESULT::", result.codeBoc);
       if (result.status === "error") {
         console.error(result.message);
         return;
       }
 
-      // Contract code cell
+      // Contract code bag of cells
       let codeCell = result.codeBoc.toString("base64");
 
       // result.fiftCode contains assembly version of your code (for debug purposes)
@@ -74,7 +65,6 @@ export default function ContractCompiler() {
     fetchFuncData();
   }, []);
 
-  // return
   return (
     <div>
       <button onClick={compilerFunc}>Compile</button>
