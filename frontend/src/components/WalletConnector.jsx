@@ -1,13 +1,14 @@
-import { useTonAddress } from '@tonconnect/ui-react';
-export const Wallet = () => {
-    const wallet = useTonWallet();
+import { useTonWallet } from "@tonconnect/ui-react";
 
-    return (
-        wallet && (
-            <div>
-                <span>Connected wallet: {wallet.name}</span>
-                <span>Device: {wallet.device.appName}</span>
-            </div>
-        )
-    );
-};
+export default function WalletConnector() {
+  const wallet = useTonWallet();
+
+  return (
+    wallet && (
+      <div>
+        <span>Connected wallet: {wallet.name}</span>
+        <span>Device: {wallet.device.appName}</span>
+      </div>
+    )
+  );
+}
