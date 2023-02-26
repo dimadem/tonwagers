@@ -1,15 +1,19 @@
 import "./App.css";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import ContractCompiler from "./components/ContractCompiler";
+import { ContractContextProvider } from "./context/contract.context";
 
 
 
-function App() {
+
+function App(pageProps: any) {
   return (
-    <div>
-      <ContractCompiler />
-      {/* <TonConnectButton /> */}
-    </div>
+    <ContractContextProvider {...pageProps} >
+      <div>
+        <ContractCompiler />
+        <TonConnectButton />
+      </div>
+    </ContractContextProvider>
   );
 }
 

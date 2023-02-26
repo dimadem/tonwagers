@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 export default function ContractCompiler() {
   const [stdlibState, setStdlib] = useState("");
   const [counterState, setCounter] = useState("");
+  const [counterCodeCell, setCounterCodeCell] = useState("");
 
   // reads file contents synchronously in client-side
   const fetchFuncData = async () => {
@@ -53,9 +54,11 @@ export default function ContractCompiler() {
 
       // Contract code bag of cells
       let codeCell = result.codeBoc.toString("base64");
+      setCounterCodeCell(codeCell);
 
       // result.fiftCode contains assembly version of your code (for debug purposes)
       console.log("CODECELL::", codeCell);
+      console.log("COUNTER CODE CELL", counterCodeCell);
     } catch (error) {
       console.log(error);
     }

@@ -10,3 +10,6 @@ export function useTonClient() {
       })
   );
 }
+
+// address of the contract
+// kQCSiCOv9TLcciwqqVQbWL121juPFcqmkVhSif-NSpd3WGEt
