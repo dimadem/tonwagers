@@ -5,7 +5,7 @@ import colors from "../constants/colors";
 import TextH2 from "../text/TextH2";
 import TextSub2 from "../text/TextSub2";
 import { useNavigate } from "react-router-dom";
-
+import { TonConnectButton } from "@tonconnect/ui-react";
 function MainScreen({ children, style }) {
   const navigate = useNavigate();
   const contractSchemes = [
@@ -42,6 +42,7 @@ function MainScreen({ children, style }) {
 
   return (
     <AppScreen style={{ alignItems: "center" }}>
+      <TonConnectButton/>
       <div style={{ padding: "20px 20px", paddingBottom: 40 }}>
         <div style={{ width: "80%", paddingLeft: 30, marginBottom: 60, marginTop: 20 }}>
           <TextH2 bold style={{}}>

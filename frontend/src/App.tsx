@@ -1,7 +1,7 @@
 // import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-// import { eth_get_address_info } from "./api/requests";
+//import { eth_get_address_info } from "./api/requests";
 import "./App.css";
 // import { walletContext } from "./hooks/walletContext";
 // import BuyScreen from "./screens/BuyScreen";
