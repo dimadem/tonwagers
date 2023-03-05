@@ -10,15 +10,23 @@
   },
   "dependencies": {
     "@orbs-network/ton-access": "^2.2.2",
+    "@ton-community/func-js": "^0.4.1",
+    "@tonconnect/protocol": "^2.2.3",
     "@tonconnect/ui-react": "^0.0.14",
+    "fs": "^0.0.1-security",
+    "js-cookie": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
+    "react-router-dom": "^6.8.1",
+    "tabler-icons-react": "^1.56.0",
     "ton": "^13.3.0",
     "ton-core": "^0.47.1",
     "ton-crypto": "^3.2.0",
     "vite-plugin-node-polyfills": "^0.7.0"
   },
   "devDependencies": {
+    "@types/node": "^18.14.1",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
